@@ -1,0 +1,19 @@
+<div class="container-fluid fill">
+  <div class="row ">
+    <div class="col-lg-6 text-center gerb">
+      <h1>Gerbs</h1>
+    </div>
+    <div class="col-lg-6 text-center dawg">
+      <h1>The Big Dawg</h1>
+      {{ vm.randomSaying.dawgMessage }}
+    </div>
+  </div>
+  <div class="row fill" ng-repeat="saying in vm.sayings">
+    <div class="col-lg-6 text-center gerb saying fill">
+      {{ saying.gerbMessage }}
+    </div>
+    <div class="col-lg-6 text-center dawg saying fill">
+      {{ saying.dawgMessage }}
+    </div>
+  </div>
+</div>
