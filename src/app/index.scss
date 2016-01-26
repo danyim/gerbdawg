@@ -5,7 +5,11 @@
 $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 $gerb-color: #6DBCDB;
+$gerb-font: 'Gloria Hallelujah', sans-serif;
 $dawg-color: #FC4349;
+$dawg-font: 'Black Ops One', sans-serif;
+$saying-font: 'Roboto', sans-serif;
+
 /**
  *  Do not remove the comments below. It's the markers used by wiredep to inject
  *  sass dependencies when defined in the bower.json of your dependencies
@@ -37,7 +41,7 @@ h1 {
 }
 
 .gerb {
-  font-family: 'Indie Flower', sans-serif;
+  font-family: $gerb-font;
   background-color: $gerb-color;
   color: #fff;
   padding-top: 2.0em;
@@ -46,17 +50,17 @@ h1 {
   }
 }
 .dawg {
-  font-family: 'Bevan', sans-serif;
+  font-family: $dawg-font;
   background-color: $dawg-color;
   color: #fff;
   padding-top: 2.0em;
   h1 {
-    font-size: 3.5em;
+    font-size: 4.0em;
   }
 }
 
 .saying {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: $saying-font;
   font-size: 1.2em;
   font-weight: normal;
   margin: 2.0em;
