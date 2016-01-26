@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $firebaseArray, $log) {
+  function MainController($scope, $firebaseArray, $log, $sanitize) {
     var vm = this;
 
     vm.sayings = [];
