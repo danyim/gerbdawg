@@ -3,17 +3,18 @@
 
   describe('controllers', function(){
     var vm;
-    var $timeout;
-    var toastr;
+    // var $timeout;
+    // var toastr;
 
     beforeEach(module('gerbsDawg'));
-    beforeEach(inject(function(_$controller_, _$timeout_, _webDevTec_, _toastr_) {
-      spyOn(_webDevTec_, 'getTec').and.returnValue([{}, {}, {}, {}, {}]);
-      spyOn(_toastr_, 'info').and.callThrough();
+    // beforeEach(inject(function(_$controller_, _$timeout_, _webDevTec_, _toastr_) {
+    beforeEach(inject(function(_$controller_) {
+      // spyOn(_webDevTec_, 'getTec').and.returnValue([{}, {}, {}, {}, {}]);
+      // spyOn(_toastr_, 'info').and.callThrough();
 
       vm = _$controller_('MainController');
-      $timeout = _$timeout_;
-      toastr = _toastr_;
+      // $timeout = _$timeout_;
+      // toastr = _toastr_;
     }));
 
     // it('should have a timestamp creation date', function() {
