@@ -27,7 +27,6 @@ html, body {
 }
 
 h1 {
-  font-size: 5.0em;
   margin-bottom: 0.8em;
 }
 
@@ -42,12 +41,18 @@ h1 {
   background-color: $gerb-color;
   color: #fff;
   padding-top: 2.0em;
+  h1 {
+    font-size: 4.0em;
+  }
 }
 .dawg {
-  font-family: 'Bitter', sans-serif;
+  font-family: 'Bevan', sans-serif;
   background-color: $dawg-color;
   color: #fff;
   padding-top: 2.0em;
+  h1 {
+    font-size: 3.5em;
+  }
 }
 
 .saying {
