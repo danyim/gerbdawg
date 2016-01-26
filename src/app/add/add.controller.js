@@ -28,7 +28,7 @@
     }
 
     function removeSaying(saying) {
-      if($window.confirm('Are you sure?')) {
+      if($window.confirm('Are you sure you want to remove this?')) {
         vm.sayings.$remove(saying);
         toastr.error('Saying removed.');
       }
