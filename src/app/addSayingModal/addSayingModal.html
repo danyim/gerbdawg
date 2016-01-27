@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-lg-12">
-    <div class="panel panel-primary" ng-show="vm.isAuthenticated">
+    <div class="panel panel-primary" ng-cloak ng-if="vm.isAuthenticated">
       <div class="panel-heading">
         Add/Edit Sayings
       </div>
@@ -46,7 +46,7 @@
         </table>
       </div>
     </div>
-    <div class="panel panel-primary" ng-show="!vm.isAuthenticated">
+    <div class="panel panel-primary" ng-cloak ng-if="!vm.isAuthenticated">
       <div class="panel-heading">
         Enter Password
       </div>
