@@ -1,6 +1,6 @@
 {
   "name": "gerbsDawg",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "dependencies": {
     "express": "^4.13.4",
     "gzippo": "^0.2.0",
