@@ -113,7 +113,7 @@
       do  {
         newIdx = Math.floor(Math.random() * vm.passwordSayings.length);
       }
-      while(currentIdx == newIdx);
+      while(currentIdx === newIdx);
       vm.passwordSayingIndex = newIdx;
     }
 
