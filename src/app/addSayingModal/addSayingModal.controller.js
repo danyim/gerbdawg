@@ -59,8 +59,11 @@
             expires: new Date(now.getFullYear(), now.getMonth() + 1, now.getDate())
           });
         }
+        toastr.success('The password worked, Big Dawg!');
       }
       else {
+        vm.password = '';
+        toastr.error('Wrong password, gerb.');
         // If it's wrong, take out the cookie
         $cookies.remove('gerbdawg');
       }
