@@ -6,7 +6,7 @@
       </div>
       <div class="panel-body">
         <p>
-          This will sync and update automatically as you type. All hail Firebase. The Big Dawg approves. Or be a gerb and <strong><a ng-click="vm.closeModal()">go back home</a> or <a ng-click="vm.logout()">log out</a></strong>.
+          This will sync and update automatically as you type. All hail Firebase. The Big Dawg approves. Or be a gerb and <strong><span ng-click="vm.closeModal()">go back home</span> or <span ng-click="vm.logout()">log out</span></strong>.
         </p>
         <table class="table table-condensed">
           <thead>
@@ -51,9 +51,14 @@
         Enter Password
       </div>
       <div class="panel-body">
-      <p class="text-center">
-              <strong>You gotta be The Big Dawg to edit this stuff</strong>
-            </p>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="text-center">
+              <strong><span class="animate" ng-click="vm.randomizePasswordSaying()">{{ vm.passwordSayings[vm.passwordSayingIndex] }}</span></strong>
+            </h4>
+            <p>&nbsp;</p>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
 

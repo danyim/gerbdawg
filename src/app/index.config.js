@@ -12,9 +12,9 @@
 
     // Set options third-party lib
     toastrConfig.allowHtml = true;
-    toastrConfig.timeOut = 2000;
+    toastrConfig.timeOut = 1200;
     toastrConfig.positionClass = 'toast-top-right';
-    toastrConfig.preventDuplicates = true;
+    toastrConfig.preventDuplicates = false;
     toastrConfig.progressBar = false;
   }
 
