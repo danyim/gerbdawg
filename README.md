@@ -2,7 +2,7 @@
 
 In this world, there are gerbs and then there's The Big Dawg. This is a simple web app that captures examples of this peculiar duality.
 
-*URL:* [https://gerbdawg.herokuapp.com/](https://gerbdawg.herokuapp.com/)
+**URL:** [https://gerbdawg.herokuapp.com/](https://gerbdawg.herokuapp.com/)
 
 Made with [Yeoman](http://yeoman.io/) with the [GulpAngular generator](https://github.com/Swiip/generator-gulp-angular), [Firebase](https://www.firebase.com/), [SCSS](http://sass-lang.com/), [Bootstrap 3](http://getbootstrap.com/), and [Heroku](https://dashboard.heroku.com/)
 
