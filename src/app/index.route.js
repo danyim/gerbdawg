@@ -16,9 +16,15 @@
       })
       .state('add', {
         url: '/add',
-        templateUrl: 'app/add/add.html',
-        controller: 'AddController',
-        controllerAs: 'vm'
+        templateUrl: 'app/main/main.html',
+        controller: 'MainController',
+        controllerAs: 'vm',
+        params: {
+          openModal: true
+        }
+        // templateUrl: 'app/addSayingModal/addSayingModal.html',
+        // controller: 'AddSayingModalController',
+        // controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');

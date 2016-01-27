@@ -6,8 +6,8 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock($log) {
-
+  function runBlock($log, $rootScope) {
+    $rootScope.isAuthenticated = false;
     // $log.debug('runBlock end');
   }
 
