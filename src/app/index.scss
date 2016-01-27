@@ -26,10 +26,6 @@ h1 {
   margin-bottom: 0.8em;
 }
 
-a, a:hover, a:active, a:visited {
-  color: #ddd;
-}
-
 .fill {
   min-height: 100%;
 }
@@ -74,16 +70,18 @@ a, a:hover, a:active, a:visited {
 
 footer {
   position: relative;
+
+  a, a:hover, a:active, a:visited {
+    color: #D7DADB;
+  }
   .credit {
     position: absolute;
     left: 0;
     bottom: 0;
     font-family: $saying-font;
-    font-size: 0.9em;
-    font-weight: bold;
-    letter-spacing: -0.05em;
+    font-size: 0.8em;
     padding: 0.4em 0.5em;
-    color: #ddd;
+    color: #D7DADB;
   }
 }
 

@@ -59,7 +59,7 @@
             expires: new Date(now.getFullYear(), now.getMonth() + 1, now.getDate())
           });
         }
-        toastr.success('The password worked, Big Dawg!');
+        toastr.success('You\'re in, Big Dawg!');
       }
       else {
         vm.password = '';
