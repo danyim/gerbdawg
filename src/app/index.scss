@@ -22,16 +22,20 @@ html, body {
   background-color: $gerb-color;
 }
 
+h1 {
+  margin-bottom: 0.8em;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #ddd;
+}
+
 .fill {
   min-height: 100%;
 }
 
 .img {
   width: 300px;
-}
-
-h1 {
-  margin-bottom: 0.8em;
 }
 
 .right {
@@ -45,6 +49,7 @@ h1 {
   background-color: $gerb-color;
   color: #fff;
   padding-top: 2.0em;
+  padding-bottom: 15.0em;
   h1 {
     font-size: 4.0em;
   }
@@ -54,6 +59,7 @@ h1 {
   background-color: $dawg-color;
   color: #fff;
   padding-top: 2.0em;
+  padding-bottom: 15.0em;
   h1 {
     font-size: 4.0em;
   }
@@ -67,11 +73,18 @@ h1 {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 0.4em;
-  padding-top: 0.5em 0.5em;
+  position: relative;
+  .credit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: $saying-font;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+    padding: 0.4em 0.5em;
+    color: #ddd;
+  }
 }
 
 // Angular animations
