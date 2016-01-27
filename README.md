@@ -1,15 +1,15 @@
-# Gerbdawg
+# gerbdawg
 
-In this world, there are gerbs and then there's The Big Dawg. This is a simple app that captures examples of this peculiar duality.
+In this world, there are gerbs and then there's The Big Dawg. This is a simple web app that captures examples of this peculiar duality.
 
-[https://gerbdawg.herokuapp.com/](https://gerbdawg.herokuapp.com/)
+*URL:* [https://gerbdawg.herokuapp.com/](https://gerbdawg.herokuapp.com/)
 
 Made with [Yeoman](http://yeoman.io/) with the [GulpAngular generator](https://github.com/Swiip/generator-gulp-angular), [Firebase](https://www.firebase.com/), [SCSS](http://sass-lang.com/), [Bootstrap 3](http://getbootstrap.com/), and [Heroku](https://dashboard.heroku.com/)
 
 
 ### Deployment
 - `gulp clean && gulp build`
-- **Note** `/dist` is commented out in the .gitignore because web.js needs to read from that folder in order for Heroku to work
+- **Note:** `/dist` is commented out in the .gitignore because web.js needs to read from that folder in order for Heroku to work
 - If you're too lazy to do this, `publish.sh` will clean, build, and commit a release for you
 
 ### This project contains great examples of
