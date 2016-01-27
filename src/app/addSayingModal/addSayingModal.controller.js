@@ -72,7 +72,7 @@
     function addSaying() {
       vm.sayings.$add(vm.newSaying);
       vm.newSaying = {};
-      toastr.success('New saying added.');
+      toastr.success('New saying added!');
     }
 
     function closeModal() {
@@ -86,7 +86,7 @@
     }
 
     function removeSaying(saying) {
-      if($window.confirm('Are you sure you want to remove this?')) {
+      if($window.confirm('Are you sure you want to remove this, Big Dawg?')) {
         vm.sayings.$remove(saying);
         toastr.error('Saying removed.');
       }

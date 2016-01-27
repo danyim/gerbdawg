@@ -20,7 +20,12 @@
 
     function activate() {
       firebase = new Firebase('https://gerbsdawg.firebaseio.com/');
-      vm.sayings = $firebaseArray(firebase.child('sayings'));
+
+      var data = $firebaseArray(firebase.child('sayings'))
+      data.$loaded().then(function() {
+        vm.sayings = data;
+      });
+
       vm.registerHotkeys();
       vm.modalIsOpen = false
       if($stateParams.openModal) vm.openModal();
