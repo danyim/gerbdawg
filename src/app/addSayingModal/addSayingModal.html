@@ -31,7 +31,7 @@
               <td></td>
               <td></td>
             </tr>
-            <tr ng-repeat="saying in vm.sayings">
+            <tr ng-repeat="saying in vm.sayings | orderBy: 'index'">
               <td>
                 <input class="form-control" ng-model="saying.gerbMessage" ng-change="vm.sayings.$save(saying)" type="text"/>
               </td>
@@ -40,6 +40,8 @@
               </td>
               <td>
                 <button class="btn btn-default" ng-click="vm.removeSaying(saying)">Remove</button>
+                <button class="btn btn-default" ng-click="vm.promoteSaying(saying)" ng-disabled="!vm.allowPromoteDemote === true"><i class="fa fa-arrow-down"></i></button>
+                <button class="btn btn-default" ng-click="vm.demoteSaying(saying)" ng-disabled="!vm.allowPromoteDemote === true"><i class="fa fa-arrow-up"></i></button>
               </td>
             </tr>
           </tbody>

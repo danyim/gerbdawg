@@ -24,6 +24,12 @@
       var data = $firebaseArray(firebase.child('sayings'))
       data.$loaded().then(function() {
         vm.sayings = data;
+        // angular.forEach(vm.sayings, function(v, i) {
+        //   // console.log('items', v);
+        //   console.log('item index', v.index, i);
+        //   v.update({ index: i });
+        //   // if(v && !v.index) v.index = i;
+        // });
       });
 
       vm.registerHotkeys();

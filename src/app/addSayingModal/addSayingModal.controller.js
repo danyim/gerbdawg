@@ -6,7 +6,7 @@
     .controller('AddSayingModalController', AddSayingModalController);
 
   /** @ngInject */
-  function AddSayingModalController($firebaseArray, $firebaseObject, $window, toastr, $modalInstance, $cookies, $rootScope, $interval) {
+  function AddSayingModalController($firebaseArray, $firebaseObject, $window, toastr, $modalInstance, $cookies, $rootScope, $interval, $q) {
     var vm = this;
     var firebase = null;
     var p;
@@ -17,6 +17,8 @@
     vm.closeModal = closeModal;
     vm.isAuthenticated = $rootScope.isAuthenticated;
     vm.logout = logout;
+    vm.demoteSaying = demoteSaying;
+    vm.promoteSaying = promoteSaying;
     vm.newSaying = {};
     vm.password = '';
     vm.passwordSayings = [
@@ -35,12 +37,14 @@
     vm.randomizePasswordSaying = randomizePasswordSaying;
     vm.rememberPass = null;
     vm.removeSaying = removeSaying;
+    vm.allowPromoteDemote = true;
 
     activate();
 
     function activate() {
       firebase = new Firebase('https://gerbsdawg.firebaseio.com/');
       vm.sayings = $firebaseArray(firebase.child('sayings'));
+
       vm.rememberPass = true;
       // Randomize the sayings
       randomizePasswordSaying();
@@ -115,6 +119,44 @@
       }
       while(currentIdx === newIdx);
       vm.passwordSayingIndex = newIdx;
+    }
+
+    function demoteSaying(saying) {
+      if(saying.index > 0) {
+        console.log('saying was ', saying.index);
+        // var otherSaying = vm.sayings[saying.index - 1];
+        var filtered = vm.sayings.filter(
+          function(v) {
+            return v.index === saying.index - 1;
+          }
+        );
+        var otherSaying = filtered[0];
+        otherSaying.index = saying.index--;
+        console.log('saying is now ', saying.index);
+        vm.allowPromoteDemote = false;
+        $q.all([vm.sayings.$save(saying), vm.sayings.$save(otherSaying)]).then(function() {
+          vm.allowPromoteDemote = true;
+        });
+      }
+    }
+
+    function promoteSaying(saying) {
+      if(saying.index < vm.sayings.length - 1) {
+        console.log('saying was ', saying.index);
+        var filtered = vm.sayings.filter(
+          function(v) {
+            return v.index === saying.index + 1;
+          }
+        );
+        // var otherSaying = vm.sayings[saying.index + 1];
+        var otherSaying = filtered[0];
+        otherSaying.index = saying.index++;
+        console.log('saying is now ', saying.index);
+        vm.allowPromoteDemote = false;
+        $q.all([vm.sayings.$save(saying), vm.sayings.$save(otherSaying)]).then(function() {
+          vm.allowPromoteDemote = true;
+        });
+      }
     }
 
     function removeSaying(saying) {

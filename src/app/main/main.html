@@ -3,14 +3,14 @@
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 fill text-center gerb">
       <img class="img" src="assets/images/gerb.png" />
       <h1>Gerbs</h1>
-      <div ng-repeat="saying in vm.sayings" class="saying slide-left">
+      <div ng-repeat="saying in vm.sayings | orderBy: 'index'" class="saying slide-left">
         ...<span ng-bind-html="saying.gerbMessage"></span>
       </div>
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 fill text-center dawg">
       <img class="img" src="assets/images/dawg.png" />
       <h1>THE BIG DAWG</h1>
-      <div ng-repeat="saying in vm.sayings" class="saying slide-right">
+      <div ng-repeat="saying in vm.sayings | orderBy: 'index'" class="saying slide-right">
         ...<span ng-bind-html="saying.dawgMessage"></span>
         <!-- <acme-malarkey values="[saying.dawgMessage]"></acme-malarkey> -->
       </div>
